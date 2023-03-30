@@ -33,20 +33,20 @@ class Cube:
         'bottom': {'right': 0, 'back': 6, 'left': 4, 'front': 2}
     }
 
-    def __init__(self):
+    def __init__(self, code=""):
         self.state = np.array(
             [i for i in range(6) for _ in range(9)]
         )
 
+        if code != "":
+            for i in range(len(code)):
+                self.state[i] = int(code[i])
+
     def code(self):
         # returns the decripted unique code of the state
         txt = ""
-        for i in range(len(self.state)//2):
-            n1 = self.state[2*i]
-            n2 = self.state[2*i+1]
-            # i need 3 bit
-            total = n1 + n2 * 8
-            txt += str(total)
+        for i in self.state:
+            txt += str(i)
         return txt
 
     def scramble(self, text=""):
