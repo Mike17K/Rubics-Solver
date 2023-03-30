@@ -1,8 +1,12 @@
 from cube import Cube
 
-m = Cube()
-m.show()
+m1 = Cube()
+m2 = Cube()
 
-print(m.scramble())
+m1.move("R U2")
+m2.move("R U2 L L'")
 
-m.show()
+m1.show()
+m2.show()
+
+print(m1.code() == m2.code())

@@ -38,6 +38,17 @@ class Cube:
             [i for i in range(6) for _ in range(9)]
         )
 
+    def code(self):
+        # returns the decripted unique code of the state
+        txt = ""
+        for i in range(len(self.state)//2):
+            n1 = self.state[2*i]
+            n2 = self.state[2*i+1]
+            # i need 3 bit
+            total = n1 + n2 * 8
+            txt += str(total)
+        return txt
+
     def scramble(self, text=""):
         if text == "":
             # from random pool of moves pick some and execute
@@ -56,8 +67,8 @@ class Cube:
         if len(moveName) > 2:
             for move in moveName.split(" "):
                 self.move(move)
-                print(f"Sub Move:{move}")
-                self.show()
+                # print(f"Sub Move:{move}")
+                # self.show()
             return
         if moveName in ['']:
             # rotate cube or middle moves
