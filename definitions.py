@@ -5,7 +5,8 @@ target = Cube()
 
 
 m1 = Cube()
-m1.move("U R D L2 R'")
+m1.move("R U F2 R U")
+
 
 cube_states = dict()
 
@@ -18,9 +19,6 @@ print(status)
 print("Different states reached: "+str(len(cube_states.keys())))
 
 # decript the solution
-m = cube_states[target.code()]
-c = Cube(target.code())
-
 movelist = []
 prev_node_code = target.code()
 while 1:

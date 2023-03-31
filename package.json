@@ -1,0 +1,23 @@
+{
+  "name": "rubics",
+  "version": "1.0.0",
+  "description": "U2 ,U' , U - Turn the top (up) face clockwise.\r D2 ,D' , D - Turn the bottom (down) face clockwise.\r R2 ,R' , R - Turn the right face clockwise.\r L2 ,L' , L - Turn the left face clockwise.\r F2 ,F' , F - Turn the front face clockwise.\r B2 ,B' , B - Turn the back face clockwise",
+  "main": "cube.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mike17K/Rubics-Solver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mike17K/Rubics-Solver/issues"
+  },
+  "homepage": "https://github.com/Mike17K/Rubics-Solver#readme",
+  "dependencies": {
+    "queue": "^6.0.2"
+  }
+}

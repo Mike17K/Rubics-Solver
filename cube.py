@@ -109,7 +109,7 @@ class Cube:
             elif moveName[1] == "'":
                 turns = 3
 
-        # turn face <--fix-->
+        # turn face
         for _ in range(turns):
             cary1 = self.state[Cube.SIDES[side]*9 + 6]
             cary2 = self.state[Cube.SIDES[side]*9 + 7]
