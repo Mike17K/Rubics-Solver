@@ -3,6 +3,14 @@ import random
 
 
 class Cube:
+    def reverce_move_name(moveName):
+        if len(moveName) == 1:
+            return moveName+"'"
+        if len(moveName) == 2:
+            if moveName[1] == '2':
+                return moveName
+            return moveName[0]
+
     MOVES = [
         "U2", "U'", "U",
         "D2", "D'", "D",
@@ -41,6 +49,9 @@ class Cube:
         if code != "":
             for i in range(len(code)):
                 self.state[i] = int(code[i])
+
+    def copy(self):
+        return Cube(self.code())
 
     def code(self):
         # returns the decripted unique code of the state
